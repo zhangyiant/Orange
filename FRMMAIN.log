@@ -1,0 +1,10 @@
+Line 16: Class MSComDlg.CommonDialog of control CommonDialog1 was not a loaded control class.
+Line 23: Class MCI.MMControl of control MMControl1 was not a loaded control class.
+Line 19: The property name _ExtentX in CommonDialog1 is invalid.
+Line 20: The property name _ExtentY in CommonDialog1 is invalid.
+Line 21: The property name _Version in CommonDialog1 is invalid.
+Line 29: The property name _ExtentX in MMControl1 is invalid.
+Line 30: The property name _ExtentY in MMControl1 is invalid.
+Line 31: The property name _Version in MMControl1 is invalid.
+Line 32: The property name DeviceType in MMControl1 is invalid.
+Line 33: The property name FileName in MMControl1 is invalid.

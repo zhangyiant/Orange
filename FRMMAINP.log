@@ -1,0 +1,26 @@
+Line 17: Class ComctlLib.Toolbar of control Toolbar1 was not a loaded control class.
+Line 82: Class MSComDlg.CommonDialog of control CommonDialog1 was not a loaded control class.
+Line 89: Class MCI.MMControl of control MMControl1 was not a loaded control class.
+Line 101: Class ComctlLib.ImageList of control ImageList1 was not a loaded control class.
+Line 24: The property name _ExtentX in Toolbar1 is invalid.
+Line 25: The property name _ExtentY in Toolbar1 is invalid.
+Line 26: The property name ButtonWidth in Toolbar1 is invalid.
+Line 27: The property name ButtonHeight in Toolbar1 is invalid.
+Line 29: The property name ImageList in Toolbar1 is invalid.
+Line 30: The property name _Version in Toolbar1 is invalid.
+Line 72: The property name Buttons in Toolbar1 is invalid.
+Line 85: The property name _ExtentX in CommonDialog1 is invalid.
+Line 86: The property name _ExtentY in CommonDialog1 is invalid.
+Line 87: The property name _Version in CommonDialog1 is invalid.
+Line 95: The property name _ExtentX in MMControl1 is invalid.
+Line 96: The property name _ExtentY in MMControl1 is invalid.
+Line 97: The property name _Version in MMControl1 is invalid.
+Line 98: The property name DeviceType in MMControl1 is invalid.
+Line 99: The property name FileName in MMControl1 is invalid.
+Line 104: The property name _ExtentX in ImageList1 is invalid.
+Line 105: The property name _ExtentY in ImageList1 is invalid.
+Line 107: The property name ImageWidth in ImageList1 is invalid.
+Line 108: The property name ImageHeight in ImageList1 is invalid.
+Line 109: The property name MaskColor in ImageList1 is invalid.
+Line 110: The property name _Version in ImageList1 is invalid.
+Line 133: The property name Images in ImageList1 is invalid.

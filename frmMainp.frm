@@ -1,0 +1,332 @@
+VERSION 5.00
+Object = "{C1A8AF28-1257-101B-8FB0-0020AF039CA3}#1.1#0"; "MCI32.OCX"
+Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.1#0"; "COMDLG32.OCX"
+Object = "{6B7E6392-850A-101B-AFC0-4210102A8DA7}#1.1#0"; "COMCTL32.OCX"
+Begin VB.Form frmMain 
+   Caption         =   "Orange"
+   ClientHeight    =   1770
+   ClientLeft      =   -1785
+   ClientTop       =   2820
+   ClientWidth     =   4680
+   Icon            =   "frmMainp.frx":0000
+   LinkTopic       =   "Form1"
+   MaxButton       =   0   'False
+   ScaleHeight     =   1770
+   ScaleWidth      =   4680
+   StartUpPosition =   2  'CenterScreen
+   Begin ComctlLib.Toolbar Toolbar1 
+      Align           =   1  'Align Top
+      Height          =   420
+      Left            =   0
+      TabIndex        =   1
+      Top             =   0
+      Width           =   4680
+      _ExtentX        =   8255
+      _ExtentY        =   741
+      ButtonWidth     =   635
+      ButtonHeight    =   582
+      Appearance      =   1
+      ImageList       =   "ImageList1"
+      _Version        =   327680
+      BeginProperty Buttons {0713E452-850A-101B-AFC0-4210102A8DA7} 
+         NumButtons      =   6
+         BeginProperty Button1 {0713F354-850A-101B-AFC0-4210102A8DA7} 
+            Key             =   "Wave"
+            Object.ToolTipText     =   "Wave"
+            Object.Tag             =   ""
+            ImageIndex      =   1
+            Style           =   1
+         EndProperty
+         BeginProperty Button2 {0713F354-850A-101B-AFC0-4210102A8DA7} 
+            Key             =   "MIDI"
+            Object.ToolTipText     =   "MIDI"
+            Object.Tag             =   ""
+            ImageIndex      =   2
+            Style           =   1
+         EndProperty
+         BeginProperty Button3 {0713F354-850A-101B-AFC0-4210102A8DA7} 
+            Key             =   "AVI"
+            Object.ToolTipText     =   "AVI"
+            Object.Tag             =   ""
+            ImageIndex      =   3
+            Style           =   1
+         EndProperty
+         BeginProperty Button4 {0713F354-850A-101B-AFC0-4210102A8DA7} 
+            Key             =   "CD"
+            Object.ToolTipText     =   "CD"
+            Object.Tag             =   ""
+            ImageIndex      =   4
+            Style           =   1
+         EndProperty
+         BeginProperty Button5 {0713F354-850A-101B-AFC0-4210102A8DA7} 
+            Object.Tag             =   ""
+            Style           =   3
+            MixedState      =   -1  'True
+         EndProperty
+         BeginProperty Button6 {0713F354-850A-101B-AFC0-4210102A8DA7} 
+            Key             =   "OpenFiles"
+            Object.ToolTipText     =   "打开"
+            Object.Tag             =   ""
+            ImageIndex      =   5
+         EndProperty
+      EndProperty
+   End
+   Begin VB.CommandButton Command1 
+      Caption         =   "Command1"
+      Height          =   495
+      Left            =   1680
+      TabIndex        =   2
+      Top             =   1200
+      Width           =   1215
+   End
+   Begin MSComDlg.CommonDialog CommonDialog1 
+      Left            =   4080
+      Top             =   600
+      _ExtentX        =   847
+      _ExtentY        =   847
+      _Version        =   327680
+   End
+   Begin MCI.MMControl MMControl1 
+      Height          =   495
+      Left            =   240
+      TabIndex        =   0
+      Top             =   600
+      Width           =   3540
+      _ExtentX        =   6244
+      _ExtentY        =   873
+      _Version        =   327680
+      DeviceType      =   ""
+      FileName        =   ""
+   End
+   Begin ComctlLib.ImageList ImageList1 
+      Left            =   3960
+      Top             =   840
+      _ExtentX        =   1005
+      _ExtentY        =   1005
+      BackColor       =   -2147483643
+      ImageWidth      =   16
+      ImageHeight     =   16
+      MaskColor       =   12632256
+      _Version        =   327680
+      BeginProperty Images {0713E8C2-850A-101B-AFC0-4210102A8DA7} 
+         NumListImages   =   5
+         BeginProperty ListImage1 {0713E8C3-850A-101B-AFC0-4210102A8DA7} 
+            Picture         =   "frmMainp.frx":030A
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage2 {0713E8C3-850A-101B-AFC0-4210102A8DA7} 
+            Picture         =   "frmMainp.frx":0624
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage3 {0713E8C3-850A-101B-AFC0-4210102A8DA7} 
+            Picture         =   "frmMainp.frx":093E
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage4 {0713E8C3-850A-101B-AFC0-4210102A8DA7} 
+            Picture         =   "frmMainp.frx":0C58
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage5 {0713E8C3-850A-101B-AFC0-4210102A8DA7} 
+            Picture         =   "frmMainp.frx":0F72
+            Key             =   ""
+         EndProperty
+      EndProperty
+   End
+   Begin VB.Menu mnuFile 
+      Caption         =   "文件(&F)"
+      Begin VB.Menu mnuOpen 
+         Caption         =   "打开..."
+      End
+      Begin VB.Menu mnuClose 
+         Caption         =   "关闭"
+      End
+      Begin VB.Menu mnuFenGe2 
+         Caption         =   "-"
+      End
+      Begin VB.Menu mnuExit 
+         Caption         =   "退出"
+      End
+   End
+   Begin VB.Menu mnuSetting 
+      Caption         =   "设置(&S)"
+      Begin VB.Menu mnuWaveSetting 
+         Caption         =   "Wave"
+      End
+      Begin VB.Menu mnuMIDISetting 
+         Caption         =   "MIDI"
+      End
+      Begin VB.Menu mnuAVISetting 
+         Caption         =   "AVI"
+      End
+      Begin VB.Menu mnuCDSetting 
+         Caption         =   "CD"
+      End
+   End
+   Begin VB.Menu mnuHelp 
+      Caption         =   "帮助(&H)"
+      Begin VB.Menu mnuFenGe1 
+         Caption         =   "-"
+      End
+      Begin VB.Menu mnuAbout 
+         Caption         =   "关于..."
+      End
+   End
+End
+Attribute VB_Name = "frmMain"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+Option Explicit
+
+Private Sub Command1_Click()
+    MsgBox MMControl1 & " " & MMControl1.TrackLength
+    
+End Sub
+
+Private Sub Form_Load()
+' Set properties needed by MCI to open.
+    MMControl1.Notify = False
+    MMControl1.Wait = True
+    MMControl1.Shareable = False
+    MMControl1.DeviceType = "WaveAudio"
+    mnuWaveSetting.Checked = True
+    ToolBarDesignSetting 1
+End Sub
+
+
+Private Sub Form_Unload(Cancel As Integer)
+    If MMControl1.DeviceType = "CDAudio" Then
+        MMControl1.Command = "Stop"
+    End If
+    MMControl1.Command = "Close"
+    
+End Sub
+
+Private Sub MMControl1_PlayClick(Cancel As Integer)
+    Select Case MMControl1.DeviceType
+        Case "WaveAudio"
+            MMControl1.Command = "Prev"
+        Case "Sequencer"
+            MMControl1.Command = "Next"
+        Case "AVIVideo"
+            MMControl1.Command = "Prev"
+    End Select
+    
+End Sub
+
+
+Private Sub mnuAbout_Click()
+    frmAbout.Show vbModal
+    
+End Sub
+
+Private Sub mnuAVISetting_Click()
+    MMControl1.Command = "Close"
+    MMControl1.DeviceType = "AVIVideo"
+    MMControl1.filename = ""
+    MoveDesignSetting mnuAVISetting
+    ToolBarDesignSetting 3
+
+End Sub
+
+Private Sub mnuCDSetting_Click()
+    MMControl1.Command = "Close"
+    MMControl1.DeviceType = "CDAudio"
+    MMControl1.filename = ""
+    MoveDesignSetting mnuCDSetting
+    ToolBarDesignSetting 4
+End Sub
+
+Private Sub mnuClose_Click()
+    MMControl1.Command = "Close"
+End Sub
+
+Private Sub mnuExit_Click()
+    Unload Me
+    End
+End Sub
+
+Private Sub mnuMIDISetting_Click()
+    MMControl1.Command = "Close"
+    MMControl1.DeviceType = "Sequencer"
+    MoveDesignSetting mnuMIDISetting
+    ToolBarDesignSetting 2
+End Sub
+
+Private Sub mnuOpen_Click()
+        ' Set CancelError is True
+    MMControl1.Command = "Close"
+    CommonDialog1.CancelError = True
+    On Error GoTo ErrHandler
+    ' Set flags
+    CommonDialog1.Flags = cdlOFNHideReadOnly
+    ' Set filters
+    Select Case MMControl1.DeviceType
+        Case "WaveAudio"
+            CommonDialog1.Filter = "Wave Files" & _
+                "(*.wav)|*.wav|All Files (*.*)|*.*"
+        Case "Sequencer"
+            CommonDialog1.Filter = "MIDI Files" & _
+                "(*.mid,*.rmi)|*.mid;*.rmi|All Files(*.*)|*.*"
+        Case "CDAudio"
+            MMControl1.Command = "Open"
+            Exit Sub
+        Case "AVIVideo"
+            CommonDialog1.Filter = "AVI Files" & _
+                "(*.avi)|*.avi|All Files(*.*)|*.*"
+    End Select
+    ' Specify default filter
+    CommonDialog1.FilterIndex = 1
+    ' Display the Open dialog box
+    CommonDialog1.ShowOpen
+    ' Display name of selected file
+
+    MMControl1.filename = CommonDialog1.filename
+    ' Open the MCI WaveAudio device.
+    MMControl1.Command = "Open"
+
+    Exit Sub
+    
+ErrHandler:
+    'User pressed the Cancel button
+    Exit Sub
+
+End Sub
+
+
+
+Private Sub mnuWaveSetting_Click()
+    MMControl1.Command = "Close"
+    MMControl1.DeviceType = "WaveAudio"
+    MoveDesignSetting mnuWaveSetting
+    ToolBarDesignSetting 1
+End Sub
+
+
+Private Sub Toolbar1_ButtonClick(ByVal Button As ComctlLib.Button)
+    Select Case Button.Key
+        Case "Wave"
+            mnuWaveSetting_Click
+            ToolBarDesignSetting Button.Image
+            
+        Case "MIDI"
+            mnuMIDISetting_Click
+            ToolBarDesignSetting Button.Image
+            
+        Case "AVI"
+            mnuAVISetting_Click
+            ToolBarDesignSetting Button.Image
+            
+        Case "CD"
+            mnuCDSetting_Click
+            ToolBarDesignSetting Button.Image
+        Case "OpenFiles"
+            mnuOpen_Click
+            
+    End Select
+    
+    
+End Sub
+
+
